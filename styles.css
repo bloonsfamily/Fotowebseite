@@ -1,0 +1,107 @@
+.grid-container{
+    display: inline-grid;
+    grid-auto-flow:row;
+    gap:10px 10px;
+    grid-template-columns: repeat(13,1fr);
+    grid-template-rows: repeat(auto-fill,1fr);
+}
+.grid-container > * {
+    background-color: rgb(255, 255, 255);
+  }
+  .zoom{
+    transition:transform .5s;
+    width:133px;
+    height:100px;
+    padding:2px;
+}
+#search{
+    width:20%;
+    padding:8px ;
+    margin: 8px 0px;
+    display:inline-block;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+    cursor: text;
+}
+
+.search-wrapper{
+    display:flex;
+    justify-content:center;
+    vertical-align: top;
+    text-align: center;
+    align-items: center;
+    gap:20px;
+
+}
+
+.image_and_text:focus,
+.image_and_text:hover{
+    transform:scale(1.75);
+    transform-origin:top left;
+}
+.image_and_text{
+    display:inline-block;
+    vertical-align:top;
+    text-align: center;
+    transition: transform .5s;
+    background-color: black;
+    border-color: white;
+    width:135px;
+
+}
+.image_text{
+    display:none;
+    color:white;     
+    font-size: 11px;   
+}
+ .image_and_text:hover  .image_text{
+    display:block;
+
+}
+.dropdown_btn{
+    background-color: #f1f1f1;
+    color: rgb(94, 88, 88);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+.dropdown_btn:hover, .dropdown_btn:focus{
+    background-color: #ddd;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+  }
+.filter_dropdown{
+    position: relative;
+    display: inline-block;
+    float:right;
+}
+.dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#dropdown_1{
+    right:0;
+}
+ /* Links inside the dropdown */
+.dropdown_content button{
+    padding:7px;
+    cursor:pointer;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown_content button:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:flex;
+    flex-direction:column;
+}
